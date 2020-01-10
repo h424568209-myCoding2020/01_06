@@ -8,6 +8,8 @@ public class M2MReceive  extends Thread {
     public M2MReceive(Socket socket) {
         this.socket = socket;
     }
+
+
     @Override
     public void run() {
         try {
@@ -18,7 +20,8 @@ public class M2MReceive  extends Thread {
                 String info = null;
                 //接收信息
                 if ((info = br.readLine()) != null) {
-                    System.out.println(info);
+                   System.out.println(info);
+
                 }
             }
         } catch (IOException e) {
